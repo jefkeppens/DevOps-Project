@@ -6,4 +6,4 @@ COPY . .
 
 EXPOSE 5000
 
-CMD ["dotnet", "project.dll"]
+ENTRYPOINT ["ls", "."]
