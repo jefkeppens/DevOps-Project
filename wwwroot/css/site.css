@@ -113,3 +113,14 @@ section div{
 h1 {
     color: white;
 }
+
+.hide {
+    display: none;
+}
+
+#myInput {
+    font-size: 16px;
+    padding: 12px 20px 12px 20px;
+    border: 1px solid #ddd;
+    height: 10px;
+}

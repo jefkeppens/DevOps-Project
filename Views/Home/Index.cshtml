@@ -3,14 +3,30 @@
 @model ContentfulCollection<ComputerPart>
 
 @{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "DevOps";
 }
 
 
-<h1>Computer Parts</h1>
+<div class="row justify-content-between mt-4 align-content-center">
+    <h1>Computer Parts</h1>
+    <input type="text" id="myInput" onkeyup="searchFunction()" placeholder="Search for parts.." title="Type in a part">
+    <div class="row align-content-center">
+        <label for="partType" class="text-light px-2">Filter by Part Type:</label>
+        <select id="partType">
+            <option value="All">All</option>
+            <option value="Motherboard">Motherboards</option>
+            <option value="PSU">PSU</option>
+            <option value="CPU">CPU</option>
+            <option value="Case">Cases</option>
+            <option value="Graphics card">Craphics cards</option>
+            <option value="SSD">SSD</option>
+        </select>
+    </div>
+</div>
+
 @foreach (var part in Model)
 {
-    <section>
+    <section class="@part.Part">
         <h2>@part.Name</h2>
         <div>
             <p class="company">@part.Company</p>
