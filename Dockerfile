@@ -6,4 +6,4 @@ COPY . .
 
 EXPOSE 5000
 
-ENTRYPOINT ["ls", "."]
+ENTRYPOINT ["dotnet", "project.ddl"]
