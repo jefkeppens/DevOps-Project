@@ -1,11 +1,9 @@
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.1
-
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build
 WORKDIR /app
-
-RUN dotnet publish
-
 COPY . .
+RUN dotnet publish -c Release -o out
 
-EXPOSE 5000
-
-ENTRYPOINT ["ls", "bin/Release/netcoreapp3.1/publish"]
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.1
+WORKDIR /app
+COPY --from=build /app/out .
+CMD ["dotnet", "project.dll"]
