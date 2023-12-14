@@ -6,4 +6,4 @@ COPY . .
 
 EXPOSE 5000
 
-ENTRYPOINT ["cat", "project.csproj"]
+ENTRYPOINT ["ls", "bin/Release/netcoreapp3.1/publish"]
