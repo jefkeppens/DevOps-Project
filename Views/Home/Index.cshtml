@@ -1,0 +1,23 @@
+﻿@using Contentful.Core.Models
+
+@model ContentfulCollection<ComputerPart>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<h1>Computer Parts</h1>
+@foreach (var part in Model)
+{
+    <section>
+        <h2>@part.Name</h2>
+        <div>
+            <p class="company">@part.Company</p>
+            <p class="part">@part.Part</p>
+            <p class="price">€ @part.Price</p>
+        </div>
+        <img src="@part.Image.File.Url" alt="@part.Image.Title" class="image" />
+    </section>
+}
+
