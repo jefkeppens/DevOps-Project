@@ -6,7 +6,8 @@
 
 document.addEventListener('DOMContentLoaded', function () {
     const partTypeSelect = document.getElementById('partType');
-    const sections = document.getElementsByTagName('section');
+    const div = document.getElementsByClassName("container");
+    const sections = div[0].getElementsByTagName('section');
 
     const applyFilter = (computerParts) => {
         const showItem = document.getElementsByClassName(partTypeSelect.value)
@@ -29,7 +30,8 @@ document.addEventListener('DOMContentLoaded', function () {
     partTypeSelect.addEventListener('change', applyFilter);
 });
 
-const sections = document.getElementsByTagName('section');
+const div = document.getElementsByClassName("container");
+const sections = div[0].getElementsByTagName('section');
 
 
 function searchFunction() {
