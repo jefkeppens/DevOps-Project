@@ -8,4 +8,8 @@
     <PackageReference Include="contentful.aspnetcore" Version="7.5.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include=".github\workflows\" />
+  </ItemGroup>
+
 </Project>

@@ -64,3 +64,4 @@ C:\Users\jefke\OneDrive\Documenten\school\devops_project\project\project\obj\Deb
 C:\Users\jefke\OneDrive\Documenten\school\devops_project\project\project\obj\Debug\netcoreapp3.1\project.dll
 C:\Users\jefke\OneDrive\Documenten\school\devops_project\project\project\obj\Debug\netcoreapp3.1\project.pdb
 C:\Users\jefke\OneDrive\Documenten\school\devops_project\project\project\obj\Debug\netcoreapp3.1\project.genruntimeconfig.cache
+C:\Users\jefke\OneDrive\Documenten\school\devops_project\project\project\obj\Debug\netcoreapp3.1\project.sourcelink.json
