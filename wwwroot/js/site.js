@@ -1,10 +1,4 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
-
-// Write your JavaScript code.
-// Add this script to your Index.cshtml or include it in a separate JavaScript file
-
-document.addEventListener('DOMContentLoaded', function () {
+﻿document.addEventListener('DOMContentLoaded', function () {
     const partTypeSelect = document.getElementById('partType');
     const div = document.getElementsByClassName("container");
     const sections = div[0].getElementsByTagName('section');
@@ -35,12 +29,11 @@ const sections = div[0].getElementsByTagName('section');
 
 
 function searchFunction() {
-    var input, filter, ul, li, a, i, txtValue;
-    input = document.getElementById("myInput");
-    filter = input.value.toUpperCase();
-    for (i = 0; i < sections.length; i++) {
-        h2 = sections[i].getElementsByTagName("h2")[0];
-        txtValue = h2.textContent || h2.innerText;
+    const input = document.getElementById("myInput");
+    const filter = input.value.toUpperCase();
+    for (let i = 0; i < sections.length; i++) {
+        const h2 = sections[i].getElementsByTagName("h2")[0];
+        const txtValue = h2.textContent || h2.innerText;
         if (txtValue.toUpperCase().indexOf(filter) > -1) {
             sections[i].style.display = "";
         } else {
